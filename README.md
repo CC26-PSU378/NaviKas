@@ -295,8 +295,8 @@ Buka **http://localhost:5173** di browser.
 
 | Resource | Link |
 |---|---|
-| 🌐 Aplikasi NaviKas | [navikasproject.vercel.app](https://navikasproject.vercel.app) |
-| 📖 Dokumentasi API | [navikasproject.vercel.app/api/docs](https://navikasproject.vercel.app/api/docs) |
+| 🌐 Aplikasi NaviKas | [navi-kas.vercel.app](https://navi-kas.vercel.app) |
+| 📖 Dokumentasi API | [navikas-production.up.railway.app/docs](https://navikas-production.up.railway.app/docs) |
 | 🤖 Model AI (Google Drive) | [Download Model Keras](https://drive.google.com/drive/folders/1rPTvN-7g-ZKWWVL-mzU-9kZF2C7jzxoP?usp=sharing) |
 
 ---
