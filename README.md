@@ -232,25 +232,64 @@ Di bagian bawah sidebar, klik nama/foto profil kamu → klik **"Keluar"**.
 
 ---
 
-## Kontribusi & Pengembangan
+## Menjalankan Secara Lokal
 
-Ingin menjalankan NaviKas secara lokal untuk pengembangan? Lihat panduan lengkapnya di **[CONTRIBUTING.md](./CONTRIBUTING.md)** *(segera hadir)*, atau ikuti langkah singkat berikut:
+### Prasyarat
+- Python 3.12
+- Node.js 18+
+- PostgreSQL
 
+### 1. Clone Repository
 ```bash
-# Clone repositori
-git clone https://github.com/username/navikasproject.git
-cd navikasproject
+git clone https://github.com/CC26-PSU378/NaviKas.git
+cd NaviKas
+```
+
+### 2. Setup Backend
+```bash
+cd backend
+
+# Buat virtual environment
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+# source .venv/bin/activate  # Mac/Linux
+
+# Install dependencies
+pip install -r requirements.txt
 
 # Salin dan isi file environment
 cp .env.example .env
-
-# Jalankan dengan Docker (direkomendasikan)
-docker compose up --build
+# Edit .env — isi DATABASE_URL, SECRET_KEY, GROQ_API_KEY, GOOGLE_CLIENT_ID
 ```
 
-Setelah berjalan, buka **http://localhost:5173**.
+### 3. Setup Frontend
+```bash
+cd frontend
 
----
+# Install dependencies
+npm install
+
+# Salin dan isi file environment
+cp .env.example .env
+# Edit .env — isi VITE_API_URL=http://localhost:8000
+```
+
+### 4. Jalankan Aplikasi
+
+**Terminal 1 — Backend:**
+```bash
+cd backend
+.venv\Scripts\activate
+uvicorn app.main:app --reload
+```
+
+**Terminal 2 — Frontend:**
+```bash
+cd frontend
+npm run dev
+```
+
+Buka **http://localhost:5173** di browser.
 
 ## Link & Sumber Daya
 
